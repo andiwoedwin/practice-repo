@@ -1,0 +1,38 @@
+h2{
+    margin-top: 20%;
+    text-align: center;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: rgb(73, 175, 41) 4px 4px 4px;
+    
+}
+h2 span{
+    color: rgb(96, 245, 10);
+}
+.home{
+    background-image: url('../images/pf.jpg');
+    background-size: cover;
+    height: 80vh;
+}
+.partners img{
+    width: 120px;
+    height: 80px;
+  }
+.partners{
+    margin-top: 1%;
+    text-align: center;
+}
+.footer{
+    padding: 1%;
+  }
+  .foot{
+    border-left: solid rgb(10, 10, 10) 1px;
+  }
+h6{
+    color: whitesmoke;
+    text-align: center;
+}
+.title{
+    background-color:black;
+    margin-top: 350px;
+}

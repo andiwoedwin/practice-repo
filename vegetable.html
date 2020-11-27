@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetables</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+  <link href="css-vegetables/vegetables.css" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome-free-5.12.0-web/css/all.css">
+  <link rel="stylesheet" href="fontawesome-free-5.12.0-web/css/all.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+  <!-- <div class="container"> -->
+   <div class="jumbotron-fluid main">
+     <h3 id="veg">i-GrocerStore</h3>
+     <h5>Your doorstep grocery store</h5>
+   </div>
+    <div class="container-fluid home" id="home">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-sm bg-success navbar-light fixed-top">
+                    <a class="navbar-brand" href="#">
+                    <img src="" alt="" style="width:70px;">
+                    </a>
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="categories" id="navbardrop" data-toggle="dropdown">
+                        CATEGORIES
+                        </a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="cereals.html" >Cereals</a>
+                        <a class="dropdown-item" href="fruits.html">Fruits</a>
+                        <a class="dropdown-item" href="herbs.html">Herbs</a>
+                        <a class="dropdown-item" href="#home">Vegetables</a>
+                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#partners">PARTNERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">CONTACT US</a>
+                    </li>
+                    </ul>
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                      <button class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></button>
+                      <i class='fas fa-shopping-cart'></i>
+                      <p class="mb-0 text-capitalize"><span id="item-count">0 </span> items - $<span class="item-total">0.00</span></p>
+                  </div>
+                </nav>
+            </div>
+        </div>
+        <!-- <h2><span>iGrocer -</span> YOUR DOORSTEP GROCERY STORE</h2> -->
+    </div>
+    <!-- End of header -->
+    <div id="cart" class="cart">
+      <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+        <h5>total</h5>
+        <h5> $ <strong id="cart-total" class="font-weight-bold">0.00</strong> </h5>
+      </div>
+      <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+        <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
+        <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+      </div>        
+    </div>
+      <div class="wrapper">
+        <h1>Vegetables</h1>
+        <span><i class="shopping-cart"></i></span>
+        <div class="clear"></div>
+      </div>
+      <div class="veggetable">
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/brocolli.webp" alt="a photo of brocolli"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+            <h2>Brocolli</h2>
+            <p>$0.72/ Bunch</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/cabbage.jpg" alt="a photo of cabbage"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+            <h2>Cabbages</h2>
+            <p>$0.4/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>  
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/carrots.jpg" alt="a photo of carrots"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Lemongrass</h2>
+            <p>$0.35/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/chilli.webp" alt="a photo of chilli"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Chilli</h2>
+            <p>$0.2/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/cucumber.webp" alt="a photo of cucumber"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>           
+            <h2>Cucumber</h2>
+            <p>$1.2/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/ginger.webp" alt="a photo of ginger"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>           
+            <h2>Ginger</h2>
+            <p>$1/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>  
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/hoho.jpg" alt="a photo of hoho"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Hoho</h2>
+            <p>$1.5/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/kohirabi.jpg" alt="a photo of kohi rabi"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Kohi rabi</h2>
+            <p>$0.6/ kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/letuce.jpg" alt="a photo of letuce"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Letuce</h2>
+            <p>$0.55/ kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/coriander.jpg" alt="a photo of ovacado"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Coriander</h2>
+            <p>$1/ kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/peas.webp" alt="a photo of peas"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Peas</h2>
+            <p>$1.1/ kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/spinach.jpg" alt="a photo of spinach"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Spinach</h2>
+            <p>$0.5/ Bunch</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/tomatoe.jpg" alt="a photo of tomatoe"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Tomatoe</h2>
+            <p>$1.2/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/sweet corn.webp" alt="a photo of sweet corn"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Sweet corn</h2>
+            <p>$0.9/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/soup vegetable.jpg" alt="a photo of soup vegetable"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Soup vegetable</h2>
+            <p>Ksh 2.12/ Bunch</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/pic12.jpg" alt="a photo of onions"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Onions</h2>
+            <p>Ksh 1.2/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/potatoe.webp" alt="a photo of peas"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Potatoes</h2>
+            <p>$0.7/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/savoykohl.jpg" alt="a photo of savoykohl"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>SavoyKohl</h2>
+            <p>Ksh $0.65/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/string.webp" alt="a photo of strings"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Strings</h2>
+            <p>$1/ Bunch</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/bean.jpg" alt="a photo of bean"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Bean</h2>
+            <p>0.5/kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/cabbage1.jpg" alt="a photo of fenugreek"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Cabbages</h2>
+            <p>$1/piece</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/perper.webp" alt="a photo of chilli"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Chilli</h2>
+            <p>$1/ kg</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/letuce.jpg" alt="a photo of letuce"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Letuce</h2>
+            <p>$0.2 each</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="veggies">
+            <img src="vegetable-images/spinach.jpg" alt="a photo of kales"><br>
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </span>
+            <h2>Kales</h2>
+            <p>$0.4/Bunch</p>
+            <!-- <button class="add-to-cart" type="button">Add to Cart</button> -->
+          </div>
+        </div>
+      </div>
+      </div>
+    <!-- Beggining of footer -->
+    <div class="container-fluid">
+    <div class="container partners">
+        <h6 class="partners">PARTNERS</h6>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="./images/imageedit_1_9239622958-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/imageedit_7_6080784108-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/Kephis-Logo-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/seven.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/egaplogo_m.jpg" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/eleven-350x204.png" alt="">
+            </div>
+        </div>
+    </div><br>
+    <div class="footer bg-success">
+        <div class="row">
+            <div class="col-md-4">
+                <h6>CONTACT INFORMATION</h6><br>
+                <img src="./images/icons/g_plus.png"> :igrocerstore@gmail.com<br>
+                <br><img src="./images/icons/skype.png"> :+254 799 111 222  
+            </div>
+            <div class="col-md-4 foot">
+                <h6>VISIT US</h6><br>
+                <p>Nairobi CBD</p>
+                <p>Anniversary Towers Street</p>
+                <p>Building opposite Kemu Towers</p>
+                <p>5th floor</p>
+                
+            </div>
+            <div class="col-md-4 foot">
+                <h6>SOCIAL MEDIA</h6><br>
+                <a href="https://www.youtube.com/" target="_blank"><img src="./images/icons/you_tube.png"></a>
+                <a href="https://web.facebook.com/" target="_blank"><img src="./images/icons/facebook.png"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="./images/icons/twitter.png"></i></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- </div> -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="  crossorigin="anonymous"></script>
+<script src="./vegetable-js/scripts.js"></script>
+</body>
+</html>

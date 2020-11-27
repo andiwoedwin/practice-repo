@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css-cereals/cereals.css">
+    <link rel="stylesheet" href="fontawesome-free-5.12.0-web/css/all.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.12.0-web/css/all.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Cereals</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid home" id="home">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                        <button class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></button>
+                        <p class="mb-0 text-capitalize"><span id="item-count">0 </span> items - $<span class="item-total">0.00</span></p>
+                    </div>
+                </nav> -->
+                <nav class="navbar navbar-expand-sm bg-success navbar-light fixed-top">
+                    <a class="navbar-brand" href="#">
+                    <img src="" alt="" style="width:70px;">
+                    </a>
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="categories" id="navbardrop" data-toggle="dropdown">
+                        CATEGORIES
+                        </a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#home">Cereals</a>
+                        <a class="dropdown-item" href="fruit.html">Fruits</a>
+                        <a class="dropdown-item" href="herbs.html">Herbs</a>
+                        <a class="dropdown-item" href="vegetable.html">Vegetables</a>
+                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#partners">PARTNERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">CONTACT US</a>
+                    </li>
+                    </ul>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                        <button class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></button>
+                        <i class='fas fa-shopping-cart'></i>
+                        <p class="mb-0 text-capitalize"><span id="item-count">0 </span> items - $<span class="item-total">0.00</span></p>
+                    </div>
+                </nav>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <!-- End of header -->
+    <!-- Navbar -->
+    <!-- Cart -->
+    <div id="cart" class="cart">
+        <!-- cart item -->
+        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+            <img src="./images-cart/AlmondNuts.jpg" class="img-fluid rounded-circle" id="item-img" alt="">
+            <div class="item-text">
+              <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+              <span>$</span>
+              <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+            </div>
+            <a href="#" id='cart-item-remove' class="cart-item-remove">
+              <i class="fas fa-trash"></i>
+            </a>
+        </div>
+          <!--end of  cart item -->
+          <!-- cart total -->
+          <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+            <h5>total</h5>
+            <h5> $ <strong id="cart-total" class="font-weight-bold">0.00</strong> </h5>
+          </div>
+          <!--end cart total -->
+          <!-- cart buttons -->
+          <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+            <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
+            <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+          </div>
+          <!--end of  cart buttons -->
+        <!-- <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+            <h5>total</h5>
+            <h5> $ <strong id="cart-total" class="font-weight-bold">0.00</strong> </h5>
+        </div> -->
+    </div>
+    <!-- /Cart -->
+    <br>
+    <div class="row">
+        <div class="col-10 mx-auto col-sm-6 text-center">
+          <h1 class="text"><span>i</span>Grocer <strong class="banner-title ">Cereals</strong></h1>
+        </div>
+    </div>
+    <!--filter buttons -->
+    <div class="row">
+        <div class="col-md-12 color">
+            <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
+            <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="all"> all</a>
+            <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Rice">Rice</a>
+            <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Wheat">Wheat</a>
+            <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Nuts">Nuts</a>
+            <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Maize">Maize</a>
+            </div>
+        </div> 
+      </div>
+      <!-- search box -->
+      <div class="row">
+        <div class="col-10 mx-auto col-md-6">
+          <form>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend ">
+                <span class="input-group-text search-box" id="search-icon"><i class="fas fa-search"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder='item....' id="search-item">
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <!--end of filter buttons -->
+    <!-- Products -->
+    <!-- <div class="wrapper">
+        <h1>Cereal</h1>
+    </div> -->
+    <!-- Rice -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <!-- Test -->
+            <!-- <div class="card ">
+                <div class="img-container">
+                  <img src="./images-cereals/AlmondNuts.jpg" class="card-img-top store-img" alt="">
+                  <span class="store-item-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </span>
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="store-item-name">Almond Nuts</h5>
+                    <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+    
+                  </div>
+                </div>
+            </div> -->
+            <!-- /Test -->
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/BasmatiWhiteRice.jpg" class="card-img-top store-img" alt="">
+                        
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Basmati Rice 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <!-- <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span> -->
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/brown-rice1.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Brown Rice 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <!-- <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span> -->
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/JasmineRice.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Jasmine Rice 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <!-- <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/PishoriRice.png" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Pishori Rice 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <!-- <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span> -->
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Rice -->
+    <br>
+    <!-- Wheat -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/BulgurWheat.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Bulgur Wheat 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">17</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/DurumWheat.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Durum Wheat 1Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">16</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/HardWhiteWheat.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Hard White 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/SoftRedWheat.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Soft Red 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">16</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /wheat -->
+    <br>
+    <!-- Nuts -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/AlmondNuts.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Almond Nuts 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">12</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/cashew-nut.png" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">cashew Nut 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/HazelNuts.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Hazel Nuts 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">16</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/PistachioNuts.jpeg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Pistachio 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Nuts -->
+    <br>
+    <!-- Millet -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/Finger-millet.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Finger Millet 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+                        </div>
+                        <!-- <span class="store-item-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/Foxtail-millet.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Foxtail Millet 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <!-- <span class="store-item-icon">
+                             <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/Little-Millet.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Little Millet 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+                        </div>
+                        <!-- <span class="store-item-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/Pearl-millet.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Pearl Millet 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <!-- <span class="store-item-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Millet -->
+    <br>
+    <!-- Maize -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/white-maize.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">white Maize 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">9</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/YellowMaize.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Yellow Maize 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">8</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/Maize.jpg" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Corn 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-log-4 mx-auto my-3 store-item">
+                <div class="card ">
+                    <div class="img-container">
+                        <img src="./images-cereals/BabyCorn.webp" class="card-img-top store-img" alt="">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">Baby Corn 1 Kg</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+                        </div>
+                        <span class="store-iten-icon">
+                            <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button>
+                        </span>
+                        <!-- <button class="add-to-cart" type="button"><i class='fas fa-shopping-cart'></i> Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Maize -->
+    <!-- /Products -->
+    <br>
+    <!-- Beggining of footer -->
+    <div class="container partners" id="partners">
+        <h6 class="partners">PARTNERS</h6>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="./images/imageedit_1_9239622958-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/imageedit_7_6080784108-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/Kephis-Logo-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/seven.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/egaplogo_m.jpg" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/eleven-350x204.png" alt="">
+            </div>
+        </div>
+    </div><br>
+    <div class="footer bg-success" id="contacts">
+        <div class="row">
+            <div class="col-md-4">
+                <h6>CONTACT INFORMATION</h6><br>
+                <img src="./images/icons/g_plus.png"> :igrocerstore@gmail.com<br>
+                <br><img src="./images/icons/skype.png"> :+254 799 111 222  
+            </div>
+            <div class="col-md-4 foot">
+                <h6>VISIT US</h6><br>
+                <p>Nairobi CBD</p>
+                <p>Anniversary Towers Street</p>
+                <p>Building opposite Kemu Towers</p>
+                <p>5th floor</p>
+                
+            </div>
+            <div class="col-md-4 foot">
+                <h6>SOCIAL MEDIA</h6><br>
+                <a href="https://www.youtube.com/" target="_blank"><img src="./images/icons/you_tube.png"></a>
+                <a href="https://web.facebook.com/" target="_blank"><img src="./images/icons/facebook.png"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="./images/icons/twitter.png"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="js-cereals/script.js"></script>
+</html>

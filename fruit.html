@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruits</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+  <link href="fruit.css" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome-free-5.12.0-web/css/all.css">
+  <link rel="stylesheet" href="fontawesome-free-5.12.0-web/css/all.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+  <!-- <div class="container"> -->
+   <div class="jumbotron-fluid main" id="home">
+     <h3 id="veg">i-GrocerStore</h3>
+     <h5>Your doorstep grocery store</h5>
+   </div>
+    <div class="container-fluid home">
+        <div class="row">
+            <div class="col-md-12 class">
+                <nav class="navbar navbar-expand-sm bg-success navbar-light fixed-top">
+                    <a class="navbar-brand" href="#">
+                    <img src="" alt="" style="width:70px;">
+                    </a>
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="categories" id="navbardrop" data-toggle="dropdown">
+                        CATEGORIES
+                        </a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="cereals.html">Cereals</a>
+                        <a class="dropdown-item" href="#home">Fruits</a>
+                        <a class="dropdown-item" href="herbs.html">Herbs</a>
+                        <a class="dropdown-item" href="vegetable.html">Vegetables</a>
+                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#partners">PARTNERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">CONTACT US</a>
+                    </li>
+                    </ul>
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                      <button class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></button>
+                      <p class="mb-0 text-capitalize"><span id="item-count">0 </span> items - Ksh <span class="item-total">0.00</span></p>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- <h2><span>iGrocer -</span> YOUR DOORSTEP GROCERY STORE</h2> -->
+    </div>
+    <!-- End of header -->
+      <div class="wrapper">
+        <h1>Fruits</h1>
+        <span><i class="shopping-cart"></i></span>
+        <div class="clear"></div>
+      </div>
+      <div class="Fruits">
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/apple-1506119__340 (1).jpg" alt="a photo of an Apple"><br>
+            <h2>Apple</h2>
+            <p>Ksh 150/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/apricots-1522680__340.jpg" alt="a photo of Apricots"><br>
+            <h2>Apricots</h2>
+            <p>Ksh 60/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>  
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/bananas-3474872__340.jpg" alt="a photo of Bananas"><br>
+            <h2>Bananas</h2>
+            <p>Ksh 145/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/blueberry-539135__340.png" alt="a photo of blueberries"><br>
+            <h2>Blueberries</h2>
+            <p>Ksh 210/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/cherries-2402449__340.jpg" alt="a photo of cherries"><br>
+            <h2>cherries</h2>
+            <p>Ksh 70/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/chestnut-1698730__340.jpg" alt="a photo of chestnut"><br>
+            <h2>chestnut</h2>
+            <p>Ksh 120/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>  
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/goji-324932__340.jpg" alt="a photo of goji"><br>
+            <h2>goji</h2>
+            <p>Ksh 150/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/gooseberry-3480623__340.jpg" alt="a photo of gooseberries"><br>
+            <h2>gooseberries</h2>
+            <p>Ksh 60/ kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/grapes-2032838__340.jpg" alt="a photo of grapes "><br>
+            <h2>grapes</h2>
+            <p>Ksh 55/ kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/guava-144145__340.jpg" alt="a photo of guava"><br>
+            <h2>guava</h2>
+            <p>Ksh 80/ kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/jack-fruit-5429143__340.jpg" alt="a photo of a jackfruit"><br>
+            <h2>jackfruit</h2>
+            <p>Ksh 90/ kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/kiwano-101499__340.jpg" alt="a photo of a kiwano"><br>
+            <h2>kiwano</h2>
+            <p>Ksh 150/ Bunch</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/kiwi-2673038__340.jpg" alt="a photo of kiwi"><br>
+            <h2>kiwi</h2>
+            <p>Ksh 125/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/lemons-1209309__340.jpg" alt="a photo of lemons"><br>
+            <h2>lemons</h2>
+            <p>Ksh 90/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/mango-1982330__340.jpg" alt="a photo of a mango"><br>
+            <h2>mango</h2>
+            <p>Ksh 170/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/papaya-74585__340.jpg" alt="a photo of papaya"><br>
+            <h2>papaya</h2>
+            <p>Ksh 120/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-3 class ">
+          <div class="fruit">
+            <img src="images-fruits/passion-fruit-3759351__340.jpg" alt="a photo of a passionfruit"><br>
+            <h2>passion fruit</h2>
+            <p>Ksh 80/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/peach-fruit-1605921__340.jpg" alt="a photo of a peach"><br>
+            <h2>peach</h2>
+            <p>Ksh 70/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/pineapple-5108775__340.jpg" alt="a photo of a pineapple"><br>
+            <h2>pineapple</h2>
+            <p>Ksh 60/ Bunch</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3 class">
+          <div class="fruit">
+            <img src="images-fruits/plum-1183497__340.jpg" alt="a photo of plums"><br>
+            <h2>plums</h2>
+            <p>Ksh 150/kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+        <!-- <div class="row">
+        <div class="col-md-3">
+          <div class="veggies">
+            <img src="vegetable-images/cabbage1.jpg" alt="a photo of fenugreek"><br>
+            <h2>Cabbages</h2>
+            <p>Ksh 50/piece</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="veggies">
+            <img src="vegetable-images/perper.webp" alt="a photo of chilli"><br>
+            <h2>Chilli</h2>
+            <p>Ksh 40/ kg</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="veggies">
+            <img src="vegetable-images/letuce.jpg" alt="a photo of letuce"><br>
+            <h2>Letuce</h2>
+            <p>Ksh 20 each</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="veggies">
+            <img src="vegetable-images/spinach.jpg" alt="a photo of kales"><br>
+            <h2>Kales</h2>
+            <p>Ksh 40/Bunch</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </div>
+        </div>
+      </div> -->
+      </div>
+    <!-- Beggining of footer -->
+    <div class="container-fluid">
+    <div class="container partners">
+        <h6 class="partners">PARTNERS</h6>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="./images/imageedit_1_9239622958-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/imageedit_7_6080784108-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/Kephis-Logo-350x204.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/seven.png" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/egaplogo_m.jpg" alt="">
+            </div>
+            <div class="col-md-2">
+                <img src="./images/eleven-350x204.png" alt="">
+            </div>
+        </div>
+    </div><br>
+    <div class="footer bg-success">
+        <div class="row">
+            <div class="col-md-4">
+                <h6>CONTACT INFORMATION</h6><br>
+                <img src="./images/icons/g_plus.png"> :igrocerstore@gmail.com<br>
+                <br><img src="./images/icons/skype.png"> :+254 799 111 222  
+            </div>
+            <div class="col-md-4 foot">
+                <h6>VISIT US</h6><br>
+                <p>Nairobi CBD</p>
+                <p>Anniversary Towers Street</p>
+                <p>Building opposite Kemu Towers</p>
+                <p>5th floor</p>
+                
+            </div>
+            <div class="col-md-4 foot">
+                <h6>SOCIAL MEDIA</h6><br>
+                <a href="https://www.youtube.com/" target="_blank"><img src="./images/icons/you_tube.png"></a>
+                <a href="https://web.facebook.com/" target="_blank"><img src="./images/icons/facebook.png"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="./images/icons/twitter.png"></i></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- </div> -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="  crossorigin="anonymous"></script>
+<script src="./vegetable-js/scripts.js"></script>
+</body>
+</html>
